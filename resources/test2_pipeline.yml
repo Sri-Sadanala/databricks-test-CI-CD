@@ -1,0 +1,9 @@
+# The main pipeline for test2
+resources:
+  pipelines:
+    test2_pipeline:
+      name: test2_pipeline
+      target: test2_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
